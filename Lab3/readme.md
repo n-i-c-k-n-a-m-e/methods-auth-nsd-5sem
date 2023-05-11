@@ -225,9 +225,9 @@ output.elasticsearch:
     certificate: "/usr/share/elasticsearch/config/certs/filebeat/filebeat.crt"
     key: "/usr/share/elasticsearch/config/certs/filebeat/filebeat.key"
 ```
-## Шаг 5 - Добавление средства для сбора сетевого трафика Pocketbeat
+## Шаг 5 - Добавление средства для сбора сетевого трафика Packetbeat
 
-1. Добавим сервис для запуска Pocketbeat:
+1. Добавим сервис для запуска Packetbeat:
 ```
  packetbeat:
     depends_on:
@@ -251,7 +251,7 @@ output.elasticsearch:
       - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=config/certs/ca/ca.crt
   
 ```
-2. Создадим файл конфигурации pocketbeat.yml, который будет отвечать за фильтрацию пактов:
+2. Создадим файл конфигурации packetbeat.yml, который будет отвечать за фильтрацию пакетов:
 ```
 packetbeat.interfaces.device: any
 
@@ -324,7 +324,7 @@ docker-compose up
 После чего авторизуемся:
 <image src = "images\a.jpg">
 
-2. Проверим работоспособность Filebeat и Pocketbeat
+2. Проверим работоспособность Filebeat и Packetbeat
 
 Это можно сделать с помощью запроса ```GET _cat/indices```:
 <image src = "images\b.jpg">
