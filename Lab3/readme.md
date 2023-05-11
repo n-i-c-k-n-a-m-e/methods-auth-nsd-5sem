@@ -225,9 +225,9 @@ output.elasticsearch:
     certificate: "/usr/share/elasticsearch/config/certs/filebeat/filebeat.crt"
     key: "/usr/share/elasticsearch/config/certs/filebeat/filebeat.key"
 ```
-## Шаг 5 - Добавление средства для сбора сетевого трафика Packetbeat
+## Шаг 5 - Добавление средства для сбора сетевого трафика Pocketbeat
 
-1. Добавим сервис для запуска Packetbeat:
+1. Добавим сервис для запуска Pocketbeat:
 ```
  packetbeat:
     depends_on:
